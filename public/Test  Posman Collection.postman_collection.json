@@ -1,0 +1,615 @@
+{
+	"info": {
+		"_postman_id": "f48489ac-806e-473f-802c-95877129b0f7",
+		"name": "Test  Posman Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3355969",
+		"_collection_link": "https://winter-spaceship-518007.postman.co/workspace/Team-Workspace~8f4ae7e9-636c-4717-82db-b2cf69cde7a5/collection/3355969-f48489ac-806e-473f-802c-95877129b0f7?action=share&source=collection_link&creator=3355969"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"denifrahman@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"denifrahman@gmail.com\",\n    \"name\": \"deni\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3ZmEyMi00ZTI4LTcyNDYtYTlhMy0zOTg0YmM3NzBjN2IiLCJqdGkiOiJhMzg3MDVmZDM4MTVhYjZjMTNjZDIzMjJjYWY0MGMyMjdlYTBjMjE2MGE5NjU4MzQzZDA1MzI3MzQzOTAyNzcyMWExZGJmMzYxYzUwNjRlMCIsImlhdCI6MTc1MjI0ODM2MC4wNDQwMzYsIm5iZiI6MTc1MjI0ODM2MC4wNDQwNDEsImV4cCI6MTc4Mzc4NDM1OC43MzUyNDMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lIhRvA9zDQKO8aPkH0190VdHq9fA5tngTF-dRLgC3UIb2auduahw7hZKR1h9Si1htYNBYMIzR9LsAzI2oD7eaQqaBUWgyvJvlUIulJMCcBIGc52Km5wJIjivwW6nROKEVscSogKFoJpUSLs2R52cXSDWGLq4AjIfU5qqqhl2kAc_RopqX5KtZhnm5EHsArunXOX8ILU6O4yPbEB-h2hZMxRk08aQ_hwG2DeCW8TmlC0R9ZRa8oNrzlshdkoC4XkPPZUNCPIHjOMfU9UVpNyRux5sR0yKBFoCzVWZ6HL0xVsXdfltu7byYUu_lRqEwmmIvuZkXIZ7JZxKdHH_6yUDDiNehGA73VKIg-xDpYsofqwKfhQnzQJCQfiirBJ13jGOB94BboDVnOzgc4i_9UunQ7G5wjVvOT_wYOPkPPwrMVdtSxfo0yrCRlC59Tsvxc7NUTfcy1SEtbFCvh4gFVlxENAC_HCwhSOOwb9dKA75ee9XvIA6isuTL4-ZzU1c1Jf8UdDzoKLnBFhUGmMtMZtBjJ635RlKVe3rv7P3AoZOfMv2HjAUCOan948RLeOlPRQ94vaVfurzzDqFwBDP0bXdozXLh0bhl3y4Bnesj5RsW_0MaONra5273w9v41zVXsqyrsoE73MGqtngidRSdi6pbaQCFqsQMc5wimHwdal4AwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sasa masako sapi update\",\n    \"code\": \"sasa\",\n    \"address\": \"surabaya\",\n    \"status\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3Zjk0NC1hM2ViLTcyOWYtYTA2Yy0yMGE0NDk0OGZkNmMiLCJqdGkiOiI0MTAzZDE3NjI1OWIwZTBiODE1NTM1ZDZkMTBjNmQ3MjJhZGE2YjkxOThlNzBlZDQzNjBmYWMwNzM3NzM5MjhmOTNlNjYzNWU3MmJmMzQ2NSIsImlhdCI6MTc1MjIzOTAxMC42MTUzOCwibmJmIjoxNzUyMjM5MDEwLjYxNTM4MywiZXhwIjoxNzgzNzc1MDA4Ljg5MTY2Mywic3ViIjoiNCIsInNjb3BlcyI6W119.Nq-4lsG8-_3eHVp3HwfaAqoKmKeC5YpTE1JirmH7Obv0wiIDYlBonUt0nP1t3FVprw_2ZBXylW6VQmD3x5-mJFb6OItsnRSnjyCIF7D4SQ0pq0gRaxq48xD0N905BAD4_23OvvCrynIQJpzDVLb9doyNytgK2D3IYipDxFEDozV4N_c_PD2qzNyEx5hKR8Q8h6GWWx6sRqli27ytP9OXbqRgxL7A3eybXjafklnAqVXTONsqORiEYD8xZEEr-mJTFwJgU5H7xpWiZghMDwspLozSU5916D_kndtbfq1og5UOaKWkRQNf7BqGfm8OUj-F2nVj0vCYHO4Xs9KLVbjV5V_J10IOoyhGn91NtFdjn_q6RoPgnLuurs_Enf2fOT9LSCzNzhzzLaGWJHwUXD1TnRN6Whh2boIabnFkAHYPsoDl8K4ZblX_L_QHnqh44yAG1nfmMHjEqRQvwERgrQWa57PCDhEUq_aSo2i80gTqZ5XxH7yY1EfCW0KvaH8LdlyuRq3EdJd3BV8ugrKEchubbbPdd6kePBb-KNo3GdTWrW9rk1KenUikqYm_WUqU0UC-BbnKwBFJ1T9VZJXw_tNH41LF4ENBHI7AksWKT5mJSltx-dgWszyiG6JwOukPSynEYJzFbxJAISgcEvwskABzsgsfrhY17gJodarzHjLuGMw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sasa masako sapi update\",\n    \"code\": \"sasa\",\n    \"address\": \"surabaya\",\n    \"status\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/products/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3Zjk0NC1hM2ViLTcyOWYtYTA2Yy0yMGE0NDk0OGZkNmMiLCJqdGkiOiI0MTAzZDE3NjI1OWIwZTBiODE1NTM1ZDZkMTBjNmQ3MjJhZGE2YjkxOThlNzBlZDQzNjBmYWMwNzM3NzM5MjhmOTNlNjYzNWU3MmJmMzQ2NSIsImlhdCI6MTc1MjIzOTAxMC42MTUzOCwibmJmIjoxNzUyMjM5MDEwLjYxNTM4MywiZXhwIjoxNzgzNzc1MDA4Ljg5MTY2Mywic3ViIjoiNCIsInNjb3BlcyI6W119.Nq-4lsG8-_3eHVp3HwfaAqoKmKeC5YpTE1JirmH7Obv0wiIDYlBonUt0nP1t3FVprw_2ZBXylW6VQmD3x5-mJFb6OItsnRSnjyCIF7D4SQ0pq0gRaxq48xD0N905BAD4_23OvvCrynIQJpzDVLb9doyNytgK2D3IYipDxFEDozV4N_c_PD2qzNyEx5hKR8Q8h6GWWx6sRqli27ytP9OXbqRgxL7A3eybXjafklnAqVXTONsqORiEYD8xZEEr-mJTFwJgU5H7xpWiZghMDwspLozSU5916D_kndtbfq1og5UOaKWkRQNf7BqGfm8OUj-F2nVj0vCYHO4Xs9KLVbjV5V_J10IOoyhGn91NtFdjn_q6RoPgnLuurs_Enf2fOT9LSCzNzhzzLaGWJHwUXD1TnRN6Whh2boIabnFkAHYPsoDl8K4ZblX_L_QHnqh44yAG1nfmMHjEqRQvwERgrQWa57PCDhEUq_aSo2i80gTqZ5XxH7yY1EfCW0KvaH8LdlyuRq3EdJd3BV8ugrKEchubbbPdd6kePBb-KNo3GdTWrW9rk1KenUikqYm_WUqU0UC-BbnKwBFJ1T9VZJXw_tNH41LF4ENBHI7AksWKT5mJSltx-dgWszyiG6JwOukPSynEYJzFbxJAISgcEvwskABzsgsfrhY17gJodarzHjLuGMw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sasa masako sapi update\",\n    \"code\": \"sasa\",\n    \"category\": \"dapur\",\n    \"unit\": \"karton\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/products/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3ZmEyMi00ZTI4LTcyNDYtYTlhMy0zOTg0YmM3NzBjN2IiLCJqdGkiOiJhMzg3MDVmZDM4MTVhYjZjMTNjZDIzMjJjYWY0MGMyMjdlYTBjMjE2MGE5NjU4MzQzZDA1MzI3MzQzOTAyNzcyMWExZGJmMzYxYzUwNjRlMCIsImlhdCI6MTc1MjI0ODM2MC4wNDQwMzYsIm5iZiI6MTc1MjI0ODM2MC4wNDQwNDEsImV4cCI6MTc4Mzc4NDM1OC43MzUyNDMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lIhRvA9zDQKO8aPkH0190VdHq9fA5tngTF-dRLgC3UIb2auduahw7hZKR1h9Si1htYNBYMIzR9LsAzI2oD7eaQqaBUWgyvJvlUIulJMCcBIGc52Km5wJIjivwW6nROKEVscSogKFoJpUSLs2R52cXSDWGLq4AjIfU5qqqhl2kAc_RopqX5KtZhnm5EHsArunXOX8ILU6O4yPbEB-h2hZMxRk08aQ_hwG2DeCW8TmlC0R9ZRa8oNrzlshdkoC4XkPPZUNCPIHjOMfU9UVpNyRux5sR0yKBFoCzVWZ6HL0xVsXdfltu7byYUu_lRqEwmmIvuZkXIZ7JZxKdHH_6yUDDiNehGA73VKIg-xDpYsofqwKfhQnzQJCQfiirBJ13jGOB94BboDVnOzgc4i_9UunQ7G5wjVvOT_wYOPkPPwrMVdtSxfo0yrCRlC59Tsvxc7NUTfcy1SEtbFCvh4gFVlxENAC_HCwhSOOwb9dKA75ee9XvIA6isuTL4-ZzU1c1Jf8UdDzoKLnBFhUGmMtMZtBjJ635RlKVe3rv7P3AoZOfMv2HjAUCOan948RLeOlPRQ94vaVfurzzDqFwBDP0bXdozXLh0bhl3y4Bnesj5RsW_0MaONra5273w9v41zVXsqyrsoE73MGqtngidRSdi6pbaQCFqsQMc5wimHwdal4AwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sasa masako sapi update\",\n    \"code\": \"sasa\",\n    \"address\": \"surabaya\",\n    \"unit\": \"pkarton\",\n    \"category\": \"dapur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3ZmEyMi00ZTI4LTcyNDYtYTlhMy0zOTg0YmM3NzBjN2IiLCJqdGkiOiJhMzg3MDVmZDM4MTVhYjZjMTNjZDIzMjJjYWY0MGMyMjdlYTBjMjE2MGE5NjU4MzQzZDA1MzI3MzQzOTAyNzcyMWExZGJmMzYxYzUwNjRlMCIsImlhdCI6MTc1MjI0ODM2MC4wNDQwMzYsIm5iZiI6MTc1MjI0ODM2MC4wNDQwNDEsImV4cCI6MTc4Mzc4NDM1OC43MzUyNDMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lIhRvA9zDQKO8aPkH0190VdHq9fA5tngTF-dRLgC3UIb2auduahw7hZKR1h9Si1htYNBYMIzR9LsAzI2oD7eaQqaBUWgyvJvlUIulJMCcBIGc52Km5wJIjivwW6nROKEVscSogKFoJpUSLs2R52cXSDWGLq4AjIfU5qqqhl2kAc_RopqX5KtZhnm5EHsArunXOX8ILU6O4yPbEB-h2hZMxRk08aQ_hwG2DeCW8TmlC0R9ZRa8oNrzlshdkoC4XkPPZUNCPIHjOMfU9UVpNyRux5sR0yKBFoCzVWZ6HL0xVsXdfltu7byYUu_lRqEwmmIvuZkXIZ7JZxKdHH_6yUDDiNehGA73VKIg-xDpYsofqwKfhQnzQJCQfiirBJ13jGOB94BboDVnOzgc4i_9UunQ7G5wjVvOT_wYOPkPPwrMVdtSxfo0yrCRlC59Tsvxc7NUTfcy1SEtbFCvh4gFVlxENAC_HCwhSOOwb9dKA75ee9XvIA6isuTL4-ZzU1c1Jf8UdDzoKLnBFhUGmMtMZtBjJ635RlKVe3rv7P3AoZOfMv2HjAUCOan948RLeOlPRQ94vaVfurzzDqFwBDP0bXdozXLh0bhl3y4Bnesj5RsW_0MaONra5273w9v41zVXsqyrsoE73MGqtngidRSdi6pbaQCFqsQMc5wimHwdal4AwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/locations",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3Zjk0NC1hM2ViLTcyOWYtYTA2Yy0yMGE0NDk0OGZkNmMiLCJqdGkiOiI0MTAzZDE3NjI1OWIwZTBiODE1NTM1ZDZkMTBjNmQ3MjJhZGE2YjkxOThlNzBlZDQzNjBmYWMwNzM3NzM5MjhmOTNlNjYzNWU3MmJmMzQ2NSIsImlhdCI6MTc1MjIzOTAxMC42MTUzOCwibmJmIjoxNzUyMjM5MDEwLjYxNTM4MywiZXhwIjoxNzgzNzc1MDA4Ljg5MTY2Mywic3ViIjoiNCIsInNjb3BlcyI6W119.Nq-4lsG8-_3eHVp3HwfaAqoKmKeC5YpTE1JirmH7Obv0wiIDYlBonUt0nP1t3FVprw_2ZBXylW6VQmD3x5-mJFb6OItsnRSnjyCIF7D4SQ0pq0gRaxq48xD0N905BAD4_23OvvCrynIQJpzDVLb9doyNytgK2D3IYipDxFEDozV4N_c_PD2qzNyEx5hKR8Q8h6GWWx6sRqli27ytP9OXbqRgxL7A3eybXjafklnAqVXTONsqORiEYD8xZEEr-mJTFwJgU5H7xpWiZghMDwspLozSU5916D_kndtbfq1og5UOaKWkRQNf7BqGfm8OUj-F2nVj0vCYHO4Xs9KLVbjV5V_J10IOoyhGn91NtFdjn_q6RoPgnLuurs_Enf2fOT9LSCzNzhzzLaGWJHwUXD1TnRN6Whh2boIabnFkAHYPsoDl8K4ZblX_L_QHnqh44yAG1nfmMHjEqRQvwERgrQWa57PCDhEUq_aSo2i80gTqZ5XxH7yY1EfCW0KvaH8LdlyuRq3EdJd3BV8ugrKEchubbbPdd6kePBb-KNo3GdTWrW9rk1KenUikqYm_WUqU0UC-BbnKwBFJ1T9VZJXw_tNH41LF4ENBHI7AksWKT5mJSltx-dgWszyiG6JwOukPSynEYJzFbxJAISgcEvwskABzsgsfrhY17gJodarzHjLuGMw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sasa masako sapi update\",\n    \"code\": \"sasa\",\n    \"address\": \"surabaya\",\n    \"status\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/locations/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"locations",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3ZmEyMi00ZTI4LTcyNDYtYTlhMy0zOTg0YmM3NzBjN2IiLCJqdGkiOiJhMzg3MDVmZDM4MTVhYjZjMTNjZDIzMjJjYWY0MGMyMjdlYTBjMjE2MGE5NjU4MzQzZDA1MzI3MzQzOTAyNzcyMWExZGJmMzYxYzUwNjRlMCIsImlhdCI6MTc1MjI0ODM2MC4wNDQwMzYsIm5iZiI6MTc1MjI0ODM2MC4wNDQwNDEsImV4cCI6MTc4Mzc4NDM1OC43MzUyNDMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lIhRvA9zDQKO8aPkH0190VdHq9fA5tngTF-dRLgC3UIb2auduahw7hZKR1h9Si1htYNBYMIzR9LsAzI2oD7eaQqaBUWgyvJvlUIulJMCcBIGc52Km5wJIjivwW6nROKEVscSogKFoJpUSLs2R52cXSDWGLq4AjIfU5qqqhl2kAc_RopqX5KtZhnm5EHsArunXOX8ILU6O4yPbEB-h2hZMxRk08aQ_hwG2DeCW8TmlC0R9ZRa8oNrzlshdkoC4XkPPZUNCPIHjOMfU9UVpNyRux5sR0yKBFoCzVWZ6HL0xVsXdfltu7byYUu_lRqEwmmIvuZkXIZ7JZxKdHH_6yUDDiNehGA73VKIg-xDpYsofqwKfhQnzQJCQfiirBJ13jGOB94BboDVnOzgc4i_9UunQ7G5wjVvOT_wYOPkPPwrMVdtSxfo0yrCRlC59Tsvxc7NUTfcy1SEtbFCvh4gFVlxENAC_HCwhSOOwb9dKA75ee9XvIA6isuTL4-ZzU1c1Jf8UdDzoKLnBFhUGmMtMZtBjJ635RlKVe3rv7P3AoZOfMv2HjAUCOan948RLeOlPRQ94vaVfurzzDqFwBDP0bXdozXLh0bhl3y4Bnesj5RsW_0MaONra5273w9v41zVXsqyrsoE73MGqtngidRSdi6pbaQCFqsQMc5wimHwdal4AwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Surabaya\",\n    \"code\": \"sasa\",\n    \"address\": \"bronggalan sawah 1 no 44\",\n    \"latitude\": \"1283492\",\n    \"longitude\": \"242352\",\n    \"status\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/locations/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"locations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3ZmEyMi00ZTI4LTcyNDYtYTlhMy0zOTg0YmM3NzBjN2IiLCJqdGkiOiJhMzg3MDVmZDM4MTVhYjZjMTNjZDIzMjJjYWY0MGMyMjdlYTBjMjE2MGE5NjU4MzQzZDA1MzI3MzQzOTAyNzcyMWExZGJmMzYxYzUwNjRlMCIsImlhdCI6MTc1MjI0ODM2MC4wNDQwMzYsIm5iZiI6MTc1MjI0ODM2MC4wNDQwNDEsImV4cCI6MTc4Mzc4NDM1OC43MzUyNDMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lIhRvA9zDQKO8aPkH0190VdHq9fA5tngTF-dRLgC3UIb2auduahw7hZKR1h9Si1htYNBYMIzR9LsAzI2oD7eaQqaBUWgyvJvlUIulJMCcBIGc52Km5wJIjivwW6nROKEVscSogKFoJpUSLs2R52cXSDWGLq4AjIfU5qqqhl2kAc_RopqX5KtZhnm5EHsArunXOX8ILU6O4yPbEB-h2hZMxRk08aQ_hwG2DeCW8TmlC0R9ZRa8oNrzlshdkoC4XkPPZUNCPIHjOMfU9UVpNyRux5sR0yKBFoCzVWZ6HL0xVsXdfltu7byYUu_lRqEwmmIvuZkXIZ7JZxKdHH_6yUDDiNehGA73VKIg-xDpYsofqwKfhQnzQJCQfiirBJ13jGOB94BboDVnOzgc4i_9UunQ7G5wjVvOT_wYOPkPPwrMVdtSxfo0yrCRlC59Tsvxc7NUTfcy1SEtbFCvh4gFVlxENAC_HCwhSOOwb9dKA75ee9XvIA6isuTL4-ZzU1c1Jf8UdDzoKLnBFhUGmMtMZtBjJ635RlKVe3rv7P3AoZOfMv2HjAUCOan948RLeOlPRQ94vaVfurzzDqFwBDP0bXdozXLh0bhl3y4Bnesj5RsW_0MaONra5273w9v41zVXsqyrsoE73MGqtngidRSdi6pbaQCFqsQMc5wimHwdal4AwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Surabaya\",\n    \"code\": \"sasa\",\n    \"latitude\": \"1283492\",\n    \"longitude\": \"242352\",\n    \"address\": \"bronggalan sawah 1 no 44\",\n    \"status\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/locations",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product To Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3ZmEyMi00ZTI4LTcyNDYtYTlhMy0zOTg0YmM3NzBjN2IiLCJqdGkiOiJhMzg3MDVmZDM4MTVhYjZjMTNjZDIzMjJjYWY0MGMyMjdlYTBjMjE2MGE5NjU4MzQzZDA1MzI3MzQzOTAyNzcyMWExZGJmMzYxYzUwNjRlMCIsImlhdCI6MTc1MjI0ODM2MC4wNDQwMzYsIm5iZiI6MTc1MjI0ODM2MC4wNDQwNDEsImV4cCI6MTc4Mzc4NDM1OC43MzUyNDMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lIhRvA9zDQKO8aPkH0190VdHq9fA5tngTF-dRLgC3UIb2auduahw7hZKR1h9Si1htYNBYMIzR9LsAzI2oD7eaQqaBUWgyvJvlUIulJMCcBIGc52Km5wJIjivwW6nROKEVscSogKFoJpUSLs2R52cXSDWGLq4AjIfU5qqqhl2kAc_RopqX5KtZhnm5EHsArunXOX8ILU6O4yPbEB-h2hZMxRk08aQ_hwG2DeCW8TmlC0R9ZRa8oNrzlshdkoC4XkPPZUNCPIHjOMfU9UVpNyRux5sR0yKBFoCzVWZ6HL0xVsXdfltu7byYUu_lRqEwmmIvuZkXIZ7JZxKdHH_6yUDDiNehGA73VKIg-xDpYsofqwKfhQnzQJCQfiirBJ13jGOB94BboDVnOzgc4i_9UunQ7G5wjVvOT_wYOPkPPwrMVdtSxfo0yrCRlC59Tsvxc7NUTfcy1SEtbFCvh4gFVlxENAC_HCwhSOOwb9dKA75ee9XvIA6isuTL4-ZzU1c1Jf8UdDzoKLnBFhUGmMtMZtBjJ635RlKVe3rv7P3AoZOfMv2HjAUCOan948RLeOlPRQ94vaVfurzzDqFwBDP0bXdozXLh0bhl3y4Bnesj5RsW_0MaONra5273w9v41zVXsqyrsoE73MGqtngidRSdi6pbaQCFqsQMc5wimHwdal4AwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1,\n    \"stock\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/locations/1/add-product",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"locations",
+								"1",
+								"add-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Out Product From Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3ZmEyMi00ZTI4LTcyNDYtYTlhMy0zOTg0YmM3NzBjN2IiLCJqdGkiOiJhMzg3MDVmZDM4MTVhYjZjMTNjZDIzMjJjYWY0MGMyMjdlYTBjMjE2MGE5NjU4MzQzZDA1MzI3MzQzOTAyNzcyMWExZGJmMzYxYzUwNjRlMCIsImlhdCI6MTc1MjI0ODM2MC4wNDQwMzYsIm5iZiI6MTc1MjI0ODM2MC4wNDQwNDEsImV4cCI6MTc4Mzc4NDM1OC43MzUyNDMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lIhRvA9zDQKO8aPkH0190VdHq9fA5tngTF-dRLgC3UIb2auduahw7hZKR1h9Si1htYNBYMIzR9LsAzI2oD7eaQqaBUWgyvJvlUIulJMCcBIGc52Km5wJIjivwW6nROKEVscSogKFoJpUSLs2R52cXSDWGLq4AjIfU5qqqhl2kAc_RopqX5KtZhnm5EHsArunXOX8ILU6O4yPbEB-h2hZMxRk08aQ_hwG2DeCW8TmlC0R9ZRa8oNrzlshdkoC4XkPPZUNCPIHjOMfU9UVpNyRux5sR0yKBFoCzVWZ6HL0xVsXdfltu7byYUu_lRqEwmmIvuZkXIZ7JZxKdHH_6yUDDiNehGA73VKIg-xDpYsofqwKfhQnzQJCQfiirBJ13jGOB94BboDVnOzgc4i_9UunQ7G5wjVvOT_wYOPkPPwrMVdtSxfo0yrCRlC59Tsvxc7NUTfcy1SEtbFCvh4gFVlxENAC_HCwhSOOwb9dKA75ee9XvIA6isuTL4-ZzU1c1Jf8UdDzoKLnBFhUGmMtMZtBjJ635RlKVe3rv7P3AoZOfMv2HjAUCOan948RLeOlPRQ94vaVfurzzDqFwBDP0bXdozXLh0bhl3y4Bnesj5RsW_0MaONra5273w9v41zVXsqyrsoE73MGqtngidRSdi6pbaQCFqsQMc5wimHwdal4AwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1,\n    \"quantity\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/locations/1/out-product",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"locations",
+								"1",
+								"out-product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mutation",
+			"item": [
+				{
+					"name": "History By Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3ZmEyMi00ZTI4LTcyNDYtYTlhMy0zOTg0YmM3NzBjN2IiLCJqdGkiOiJhMzg3MDVmZDM4MTVhYjZjMTNjZDIzMjJjYWY0MGMyMjdlYTBjMjE2MGE5NjU4MzQzZDA1MzI3MzQzOTAyNzcyMWExZGJmMzYxYzUwNjRlMCIsImlhdCI6MTc1MjI0ODM2MC4wNDQwMzYsIm5iZiI6MTc1MjI0ODM2MC4wNDQwNDEsImV4cCI6MTc4Mzc4NDM1OC43MzUyNDMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lIhRvA9zDQKO8aPkH0190VdHq9fA5tngTF-dRLgC3UIb2auduahw7hZKR1h9Si1htYNBYMIzR9LsAzI2oD7eaQqaBUWgyvJvlUIulJMCcBIGc52Km5wJIjivwW6nROKEVscSogKFoJpUSLs2R52cXSDWGLq4AjIfU5qqqhl2kAc_RopqX5KtZhnm5EHsArunXOX8ILU6O4yPbEB-h2hZMxRk08aQ_hwG2DeCW8TmlC0R9ZRa8oNrzlshdkoC4XkPPZUNCPIHjOMfU9UVpNyRux5sR0yKBFoCzVWZ6HL0xVsXdfltu7byYUu_lRqEwmmIvuZkXIZ7JZxKdHH_6yUDDiNehGA73VKIg-xDpYsofqwKfhQnzQJCQfiirBJ13jGOB94BboDVnOzgc4i_9UunQ7G5wjVvOT_wYOPkPPwrMVdtSxfo0yrCRlC59Tsvxc7NUTfcy1SEtbFCvh4gFVlxENAC_HCwhSOOwb9dKA75ee9XvIA6isuTL4-ZzU1c1Jf8UdDzoKLnBFhUGmMtMZtBjJ635RlKVe3rv7P3AoZOfMv2HjAUCOan948RLeOlPRQ94vaVfurzzDqFwBDP0bXdozXLh0bhl3y4Bnesj5RsW_0MaONra5273w9v41zVXsqyrsoE73MGqtngidRSdi6pbaQCFqsQMc5wimHwdal4AwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/mutations/product/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mutations",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History By User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3Zjk0NC1hM2ViLTcyOWYtYTA2Yy0yMGE0NDk0OGZkNmMiLCJqdGkiOiI0MTAzZDE3NjI1OWIwZTBiODE1NTM1ZDZkMTBjNmQ3MjJhZGE2YjkxOThlNzBlZDQzNjBmYWMwNzM3NzM5MjhmOTNlNjYzNWU3MmJmMzQ2NSIsImlhdCI6MTc1MjIzOTAxMC42MTUzOCwibmJmIjoxNzUyMjM5MDEwLjYxNTM4MywiZXhwIjoxNzgzNzc1MDA4Ljg5MTY2Mywic3ViIjoiNCIsInNjb3BlcyI6W119.Nq-4lsG8-_3eHVp3HwfaAqoKmKeC5YpTE1JirmH7Obv0wiIDYlBonUt0nP1t3FVprw_2ZBXylW6VQmD3x5-mJFb6OItsnRSnjyCIF7D4SQ0pq0gRaxq48xD0N905BAD4_23OvvCrynIQJpzDVLb9doyNytgK2D3IYipDxFEDozV4N_c_PD2qzNyEx5hKR8Q8h6GWWx6sRqli27ytP9OXbqRgxL7A3eybXjafklnAqVXTONsqORiEYD8xZEEr-mJTFwJgU5H7xpWiZghMDwspLozSU5916D_kndtbfq1og5UOaKWkRQNf7BqGfm8OUj-F2nVj0vCYHO4Xs9KLVbjV5V_J10IOoyhGn91NtFdjn_q6RoPgnLuurs_Enf2fOT9LSCzNzhzzLaGWJHwUXD1TnRN6Whh2boIabnFkAHYPsoDl8K4ZblX_L_QHnqh44yAG1nfmMHjEqRQvwERgrQWa57PCDhEUq_aSo2i80gTqZ5XxH7yY1EfCW0KvaH8LdlyuRq3EdJd3BV8ugrKEchubbbPdd6kePBb-KNo3GdTWrW9rk1KenUikqYm_WUqU0UC-BbnKwBFJ1T9VZJXw_tNH41LF4ENBHI7AksWKT5mJSltx-dgWszyiG6JwOukPSynEYJzFbxJAISgcEvwskABzsgsfrhY17gJodarzHjLuGMw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/mutations/user/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mutations",
+								"user",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
